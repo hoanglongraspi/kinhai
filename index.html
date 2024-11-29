@@ -469,6 +469,14 @@
                 font-size: 1.2rem;
             }
         }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #00ffff;
+        }
     </style>
 </head>
 <body>
@@ -497,10 +505,10 @@
     </div>
 
     <div class="model-section" id="model">
-        <h2 class="section-title">Mô Hình 3D Sản Phẩm</h2>
+        <div class="loading">Đang tải mô hình...</div>
         <model-viewer
-            src="kinh.glb"
-            ios-src="kinh.usdz"
+            src="/models/kinh.glb"
+            ios-src="/models/kinh.usdz"
             alt="Mô hình kính AI"
             ar
             ar-modes="scene-viewer quick-look webxr"
