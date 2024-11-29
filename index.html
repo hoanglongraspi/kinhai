@@ -108,7 +108,34 @@
         model-viewer {
             width: 100%;
             height: 400px;
+            margin: 0 auto;
             background: #000000;
+        }
+
+        .progress-bar {
+            display: block;
+            width: 33%;
+            height: 10%;
+            max-height: 2px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            border-radius: 25px;
+            background-color: rgba(0, 255, 255, 0.2);
+        }
+
+        .progress-bar.hide {
+            visibility: hidden;
+            transition: visibility 0.3s;
+        }
+
+        .update-bar {
+            background-color: #00ffff;
+            width: 0%;
+            height: 100%;
+            border-radius: 25px;
+            transition: width 0.3s;
         }
 
         .ar-button {
@@ -120,14 +147,13 @@
             position: absolute;
             bottom: 16px;
             right: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            cursor: pointer;
         }
 
-        .ar-button img {
-            width: 24px;
-            height: 24px;
+        @media (max-width: 768px) {
+            model-viewer {
+                height: 300px;
+            }
         }
 
         /* Mobile specific styles */
@@ -473,8 +499,8 @@
     <div class="model-section" id="model">
         <h2 class="section-title">Mô Hình 3D Sản Phẩm</h2>
         <model-viewer
-            src="./kinh.glb"
-            ios-src="./kinh.usdz"
+            src="kinh.glb"
+            ios-src="kinh.usdz"
             alt="Mô hình kính AI"
             ar
             ar-modes="scene-viewer quick-look webxr"
@@ -484,13 +510,17 @@
             shadow-intensity="1"
             interaction-prompt="none"
             touch-action="pan-y"
-            style="background-color: #000000;"
-            poster="poster.jpg">
+            style="background-color: #000000;">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
             <button slot="ar-button" class="ar-button">
-                <img src="ar_icon.png" alt="AR icon">
                 Xem trong AR
             </button>
         </model-viewer>
+
+        <!-- Add loading and error messages -->
+        <div id="error-message" style="display: none; color: #00ffff; text-align: center; padding: 1rem;"></div>
     </div>
 
     <div class="features" id="features">
@@ -534,52 +564,41 @@
 
     <!-- Add this script before closing body tag -->
     <script>
-        const modelViewer = document.querySelector('model-viewer');
-        
-        // Loading animation
-        modelViewer.addEventListener('progress', (e) => {
-            const progressBar = modelViewer.querySelector('.update-bar');
-            progressBar.style.width = `${e.detail.totalProgress * 100}%`;
+        document.addEventListener('DOMContentLoaded', function() {
+            const modelViewer = document.querySelector('model-viewer');
+            const progressBar = document.querySelector('.progress-bar');
+            const updateBar = document.querySelector('.update-bar');
+            const errorMessage = document.getElementById('error-message');
+
+            if (modelViewer) {
+                // Loading progress
+                modelViewer.addEventListener('progress', (event) => {
+                    if (updateBar) {
+                        const progress = event.detail.totalProgress * 100;
+                        updateBar.style.width = `${progress}%`;
+                    }
+                });
+
+                // Error handling
+                modelViewer.addEventListener('error', (error) => {
+                    console.error('Error loading model:', error);
+                    if (errorMessage) {
+                        errorMessage.style.display = 'block';
+                        errorMessage.textContent = 'Không thể tải mô hình 3D. Vui lòng thử lại sau.';
+                    }
+                });
+
+                // AR status
+                modelViewer.addEventListener('ar-status', (event) => {
+                    if (event.detail.status === 'failed') {
+                        if (errorMessage) {
+                            errorMessage.style.display = 'block';
+                            errorMessage.textContent = 'AR không khả dụng trên thiết bị này.';
+                        }
+                    }
+                });
+            }
         });
-
-        // Check platform
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-        const isAndroid = /Android/.test(navigator.userAgent);
-        
-        if (isIOS || isAndroid) {
-            // Mobile-specific configurations
-            modelViewer.setAttribute('interaction-prompt', 'none');
-            modelViewer.setAttribute('ar-placement', 'floor');
-            
-            // Error handling
-            modelViewer.addEventListener('error', (error) => {
-                console.error('Error loading model:', error);
-                const errorMessage = document.createElement('div');
-                errorMessage.style.color = '#00ffff';
-                errorMessage.style.textAlign = 'center';
-                errorMessage.style.padding = '20px';
-                
-                if (isIOS) {
-                    errorMessage.textContent = 'Vui lòng sử dụng Safari trên iOS để xem AR';
-                } else if (isAndroid) {
-                    errorMessage.textContent = 'Vui lòng sử dụng Chrome trên Android để xem AR';
-                }
-                
-                modelViewer.parentNode.appendChild(errorMessage);
-            });
-
-            // AR status handling
-            modelViewer.addEventListener('ar-status', (event) => {
-                if (event.detail.status === 'failed') {
-                    const errorMessage = document.createElement('div');
-                    errorMessage.style.color = '#00ffff';
-                    errorMessage.style.textAlign = 'center';
-                    errorMessage.style.padding = '20px';
-                    errorMessage.textContent = `AR không khả dụng: ${event.detail.error}`;
-                    modelViewer.parentNode.appendChild(errorMessage);
-                }
-            });
-        }
 
         const hamburger = document.querySelector('.hamburger');
         const nav = document.querySelector('nav');
