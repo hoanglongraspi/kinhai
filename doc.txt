@@ -1,0 +1,313 @@
+MỤC LỤC    
+PHẦN 1: MỞ ĐẦU
+1. LÝ DO CHỌN ĐỀ TÀI
+2. MỤC ĐÍCH VÀ PHƯƠNG PHÁP NGHIÊN CỨU
+1.1 Mục đích của đề tài	2
+1.2. Phương pháp nghiên cứu	3
+PHẦN II: TỔNG QUAN
+	1. Mô tả sản phẩm	3
+2. Phạm vi ứng dụng 	5
+3. Các giả thuyết nghiên cứu: 	6
+4.Thực trạng và những mâu thuẫn	7
+PHẦN III: PHƯƠNG PHÁP NGHIÊN CỨU:
+1. Các biện pháp giải quyết vấn đề	8
+2. Phân tích và xây dựng hệ thống điều khiển.	10
+3. Viết code điều khiển hoạt động của bộ xử lý tín hiệu: 	10	
+4. Nguyên lý hoạt động của hệ thống	12
+5. Thử nghiệm- kết quả	12
+6. Hạn chế.	13
+7. Hướng phát triển của đề tài.	13
+ PHẦN IV: KẾT LUẬN
+1.	Ý NGHĨA CỦA ĐỀ TÀI: 
+2. ĐỀ XUẤT
+Lời cảm ơn	15
+Tài liệu tham khảo	16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PHẦN 1: MỞ ĐẦU
+1. LÝ DO CHỌN ĐỀ TÀI
+ 	Người khiếm thị là một nhóm đối tượng trong xã hội gặp phải rất nhiều khó khăn trong việc tiếp cận thông tin và môi trường xung quanh. Việc thiếu khả năng nhận diện văn bản và hình ảnh khiến họ gặp khó khăn trong mọi việc. Trí tuệ nhân tạo (AI) đang phát triển mạnh mẽ và đã có nhiều ứng dụng trong việc hỗ trợ người khuyết tật, đặc biệt là trong lĩnh vực nhận diện hình ảnh, nhận dạng văn bản và chuyển văn bản thành giọng nói. Các công nghệ AI như OCR (Optical Character Recognition) và Text-to-Speech (TTS) đã đạt được những bước tiến vượt bậc trong việc cung cấp thông tin cho người khiếm thị. Việc áp dụng các công nghệ AI vào việc phát triển “Kính thông minh” có thể mở ra một hướng đi mới giúp người khiếm thị không chỉ đọc được văn bản mà còn có thể hiểu được môi trường xung quanh thông qua mô tả hình ảnh, từ đó cải thiện chất lượng cuộc sống và sự độc lập của họ.
+Với sự phát triển không ngừng của công nghệ AI và thiết bị điện tử thông minh, việc tích hợp các công nghệ này vào trong các sản phẩm hỗ trợ người khiếm thị đang trở thành một nhu cầu cấp thiết. Các sản phẩm kính AI có thể được áp dụng ngay trong các hoạt động hàng ngày của người khiếm thị, giúp họ giải quyết những vấn đề như: Đọc sách, báo, tài liệu học tập; nhận diện các vật thể xung quanh, bao gồm các biển báo giao thông, phương tiện đi lại, hoặc các chướng ngại vật; giao tiếp với những người xung quanh qua mô tả môi trường hoặc cảnh vật.
+Với những ứng dụng thực tế rõ ràng và khả năng cải thiện đời sống, đề tài này có thể được triển khai ngay sau khi hoàn thành nghiên cứu, mang lại tác động tích cực cho cộng đồng. Một trong những lí do quan trọng của việc nghiên cứu và phát triển “ Kính AI hỗ trợ hỗ trợ đọc văn bản và mô tả hình ảnh cho người khiếm thị ”  là giúp họ tăng cường khả năng độc lập trong cuộc sống hàng ngày. Việc có thể tự mình đọc văn bản, nhận diện hình ảnh hoặc mô tả môi trường xung quanh sẽ giúp người khiếm thị giảm bớt sự phụ thuộc vào người khác, đồng thời nâng cao chất lượng sống và sự hòa nhập xã hội.
+2. MỤC ĐÍCH VÀ PHƯƠNG PHÁP NGHIÊN CỨU
+1.1 Mục đích của đề tài
+Mục đích của đề tài "Kính AI hỗ trợ đọc văn bản và mô tả hình ảnh cho người khiếm thị" là phát triển một hệ thống kính thông minh tích hợp công nghệ trí tuệ nhân tạo (AI), giúp người khiếm thị có thể tiếp cận thông tin và hiểu được môi trường xung quanh qua việc đọc văn bản và mô tả hình ảnh một cách dễ dàng và tiện lợi. Các mục tiêu cụ thể bao gồm:
+Nhận diện và đọc văn bản từ các nguồn khác nhau (tài liệu, bảng hiệu, biển quảng cáo, v.v.).
+Mô tả hình ảnh hoặc cảnh vật xung quanh để cung cấp thông tin trực quan về môi trường cho người khiếm thị.
+Cung cấp trải nghiệm người dùng thân thiện và dễ sử dụng.
+Tăng cường sự độc lập cho người khiếm thị
+Ứng dụng công nghệ AI vào đời sống thực tế: Ứng dụng trí tuệ nhân tạo trong hỗ trợ người khuyết tật: Mục tiêu không chỉ là phát triển một sản phẩm hỗ trợ mà còn nghiên cứu cách AI có thể được áp dụng để giải quyết các vấn đề thực tế của người khiếm thị. Việc kết hợp các công nghệ nhận diện văn bản (OCR), nhận diện hình ảnh (image recognition), và chuyển văn bản thành giọng nói (TTS) sẽ tạo ra một sản phẩm có tính ứng dụng cao, mang lại lợi ích lâu dài cho người khiếm thị.
+Khuyến khích sự phát triển của các giải pháp công nghệ mới: Mục tiêu của đề tài là đóng góp vào lĩnh vực nghiên cứu công nghệ hỗ trợ người khuyết tật, thúc đẩy sự sáng tạo và đổi mới trong việc sử dụng công nghệ để giải quyết những thách thức mà người khiếm thị gặp phải.
+Đánh giá hiệu quả và khả năng ứng dụng của hệ thống:  thử nghiệm thực tế với người khiếm thị để đánh giá độ chính xác và hiệu quả của kính AI trong việc hỗ trợ đọc văn bản và mô tả hình ảnh. Từ đó, hệ thống có thể được tối ưu hóa để phù hợp hơn với nhu cầu sử dụng trong đời sống hàng ngày; xác định các lĩnh vực ứng dụng rộng rãi. Ngoài việc hỗ trợ người khiếm thị trong việc đọc sách và mô tả cảnh vật, kính AI có thể được mở rộng ứng dụng trong các lĩnh vực khác như học tập, công việc, du lịch, và giao tiếp, mang lại lợi ích lớn cho cộng đồng người khuyết tật.
+1.2. Phương pháp nghiên cứu
+- Phương pháp phân loại và hệ thống hóa lý thuyết: Thu thập thông tin từ nhiều nguồn sách, báo, tạp chí, và cổng thông tin điện tử, các tạp chí tin học.
+- Phương pháp quan sát khoa học: Đi khảo sát thực tế những nơi nuôi dạy trẻ khiếm thị; học sinh khiếm thị học hòa nhập tại trường.
+- Phương pháp thực nghiệm khoa học: Tiến hành thiết kế và thi công hệ thống để kiểm tra tính thực tế để có những cải tiến phù hợp.
+	3. Tính năng mới của đề tài
+Nâng cao tự chủ cho người khiếm thị: Sản phẩm giúp người khiếm thị tự đọc tài liệu, nhận diện môi trường xung quanh mà không cần sự hỗ trợ liên tục từ người khác.
+Hỗ trợ đa dạng tình huống thực tế: Từ mua sắm, đọc biển báo giao thông, đến tham gia các hoạt động xã hội, sản phẩm mang lại sự tiện lợi và an toàn hơn.
+Tiếp cận công nghệ dễ dàng: Với thiết kế nhỏ gọn và chi phí thấp, sản phẩm trở thành giải pháp khả thi cho nhiều người khiếm thị, đặc biệt tại các nước đang phát triển.
+Tăng cường hòa nhập xã hội: Giúp người khiếm thị tham gia học tập, làm việc, và giao tiếp hiệu quả hơn, thu hẹp khoảng cách giữa họ và cộng đồng.
+	PHẦN II: TỔNG QUAN
+	1. Mô tả sản phẩm
+	1.1 AI là gì?
+Trí Tuệ Nhân Tạo (Artificial Intelligence - AI) là lĩnh vực của khoa học máy tính nghiên cứu về việc phát triển các hệ thống máy tính, phần mềm hoặc máy móc có thể thực hiện các nhiệm vụ mà thường yêu cầu trí tuệ của con người. Những nhiệm vụ này bao gồm khả năng học hỏi, tư duy, ra quyết định, hiểu ngôn ngữ, nhận diện hình ảnh, và giải quyết các vấn đề phức tạp.
+1.2 Raspberry Pi Zero 2 W
+Raspberry Pi Zero 2 W là một phiên bản nâng cấp mạnh mẽ của Raspberry Pi Zero, cung cấp hiệu suất vượt trội trong một thiết bị cực kỳ nhỏ gọn và giá cả phải chăng. Nó phù hợp cho các dự án yêu cầu tính di động, tiết kiệm chi phí và khả năng kết nối không dây, đồng thời vẫn giữ được tính linh hoạt và khả năng tùy biến cao. Đây là một lựa chọn tuyệt vời cho các nhà phát triển, giáo viên, và những người đam mê sáng tạo muốn xây dựng các sản phẩm hoặc ứng dụng sử dụng máy tính nhỏ gọn.
+1.3  Camera v3
+Camera v3 là một module camera chính thức của Raspberry Pi Foundation. Đây là một sản phẩm rất phổ biến cho các dự án cần ghi hình, chụp ảnh hoặc video, cũng như các ứng dụng trong robot, giám sát an ninh, hoặc nhận dạng hình ảnh. Camera v3 của Raspberry Pi là một lựa chọn tuyệt vời cho các dự án cần khả năng quay video và chụp ảnh chất lượng cao trong một gói nhỏ gọn, giá cả phải chăng. Với cảm biến 12.3 MP, hỗ trợ quay video 1080p60, khả năng tự động điều chỉnh ánh sáng và cân bằng trắng, Camera v3 là một công cụ mạnh mẽ cho các ứng dụng từ giám sát, nhận diện hình ảnh đến các dự án sáng tạo hoặc IoT.
+1.4 Yêu cầu đối với cơ sở hạ tầng cần thiết để triển khai ứng dụng sản phẩm 
+Kết nối mạng: 4G hoặc Wi-Fi để xử lý dữ liệu qua đám mây và cập nhật phần mềm.
+Nguồn điện: Pin sạc tích hợp hoặc power bank đảm bảo hoạt động liên tục.
+Phần cứng: Raspberry Pi Zero 2 W, Camera v3
+1.5 Hướng dẫn cài đặt và sử dụng
+Bước 1: Kết nối kính với Internet
+Bước 2: Chạm vào 2 nút cảm ứng ở 2 cạnh của kính để chọn tính năng “Mô tả ảnh” hoặc “Đọc văn bản”
+2. Phạm vi ứng dụng 
+Hỗ trợ người khiếm thị: đọc văn bản từ sách, báo, tài liệu, hoặc bảng thông báo; mô tả hình ảnh chụp được trong các tình huống hằng ngày.
+Ứng dụng trong giáo dục: hỗ trợ học tập và tiếp cận tài liệu học tập cho học sinh, sinh viên khiếm thị.
+Hỗ trợ tại nơi làm việc: đọc tài liệu hoặc hướng dẫn công việc cho người khiếm thị trong môi trường văn phòng hoặc sản xuất.
+Ứng dụng trong đời sống thường ngày: hỗ trợ di chuyển, nhận diện vật dụng, hoặc đọc nhãn mác trong mua sắm và sinh hoạt.
+Hỗ trợ giao tiếp: giúp người khiếm thị nhận diện nội dung hình ảnh hoặc văn bản để tham gia các hoạt động xã hội.
+3. Các giả thuyết nghiên cứu: 
+Giả Thuyết 1: Kính AI có khả năng nhận diện văn bản chính xác và nhanh chóng, giúp người khiếm thị tiếp cận thông tin
+Kiểm chứng: Để kiểm chứng giả thuyết này, các thử nghiệm sẽ được thực hiện bằng cách đưa ra các văn bản với độ phức tạp và điều kiện ánh sáng khác nhau. Hệ thống kính sẽ nhận diện và đọc văn bản cho người khiếm thị. Hiệu quả và độ chính xác của việc nhận diện văn bản trong các tình huống khác nhau sẽ được đo lường.
+Mong đợi: Kính AI sẽ có thể nhận diện và đọc văn bản một cách nhanh chóng và chính xác, giúp người khiếm thị dễ dàng tiếp cận các thông tin quan trọng mà không cần sự trợ giúp từ người khác.
+Giả Thuyết 2: Kính AI có thể mô tả hình ảnh và cảnh vật xung quanh một cách chính xác, giúp người khiếm thị nhận diện môi trường và di chuyển an toàn
+Kiểm chứng: Để kiểm chứng giả thuyết này, các thử nghiệm sẽ được thực hiện với những tình huống thực tế, nơi người khiếm thị sẽ di chuyển qua các khu vực có sự thay đổi cảnh vật, như trong các thành phố, công viên hoặc môi trường trong nhà. Kính AI sẽ mô tả các đối tượng, vật thể và các yếu tố xung quanh trong môi trường. Tính chính xác và độ chi tiết của các mô tả hình ảnh sẽ được đánh giá.
+Mong đợi: Kính AI sẽ cung cấp những mô tả chi tiết, dễ hiểu về các đối tượng và cảnh vật, giúp người khiếm thị nhận biết và di chuyển một cách tự tin và an toàn.
+Giả Thuyết 3: Kính AI giúp giảm bớt sự phụ thuộc của người khiếm thị vào người khác trong việc đọc và nhận diện môi trường
+Kiểm chứng: Để kiểm chứng giả thuyết này, người khiếm thị sẽ được yêu cầu sử dụng kính AI để thực hiện các nhiệm vụ hàng ngày như đọc biển hiệu, nhận diện các đối tượng, hoặc tìm đường trong môi trường công cộng. Mức độ phụ thuộc vào người khác sẽ được đánh giá trước và sau khi sử dụng kính AI.
+Mong đợi: Kính AI sẽ giúp người khiếm thị giảm sự phụ thuộc vào người hỗ trợ, từ đó tăng khả năng độc lập và tự tin trong việc thực hiện các hoạt động hàng ngày.
+Giả Thuyết 4: Kính AI có thể tích hợp hiệu quả với các công nghệ khác, tạo ra một hệ thống hỗ trợ toàn diện cho người khiếm thị
+Kiểm chứng: Để kiểm chứng giả thuyết này, các thử nghiệm sẽ được thực hiện với các thiết bị bổ sung như tai nghe, cảm biến chuyển động hoặc ứng dụng định vị. Các khả năng tích hợp và sự đồng bộ giữa kính AI và các thiết bị này sẽ được kiểm tra trong các tình huống thực tế.
+Mong đợi: Kính AI sẽ có thể hoạt động linh hoạt và hiệu quả khi được tích hợp với các công nghệ hỗ trợ khác, cung cấp một hệ sinh thái toàn diện giúp người khiếm thị điều hướng và tương tác với môi trường xung quanh một cách dễ dàng.
+Giả Thuyết 5: Kính AI sẽ có khả năng hoạt động ổn định trong các điều kiện môi trường khác nhau (ánh sáng yếu, môi trường ồn ào, v.v.)
+Kiểm chứng: Để kiểm chứng giả thuyết này, các thử nghiệm sẽ được thực hiện trong các môi trường với các mức độ ánh sáng khác nhau (từ ánh sáng yếu trong nhà đến ánh sáng mạnh ngoài trời), cũng như trong các môi trường có tiếng ồn hoặc tắc nghẽn. Kết quả sẽ được đánh giá dựa trên hiệu quả và độ chính xác của hệ thống trong việc nhận diện văn bản và mô tả hình ảnh trong những điều kiện này.
+Mong đợi: Kính AI sẽ duy trì khả năng nhận diện và mô tả chính xác ngay cả trong các điều kiện môi trường khắc nghiệt, giúp người khiếm thị tiếp cận thông tin và di chuyển an toàn hơn trong nhiều tình huống khác nhau.
+4.Thực trạng và những mâu thuẫn
+4.1 Thực trạng công nghệ hiện tại
+Hệ thống hỗ trợ đọc văn bản
+Các công nghệ nhận dạng văn bản (OCR) đã giúp chuyển đổi văn bản in thành dạng âm thanh hoặc văn bản điện tử để người khiếm thị có thể nghe hoặc sử dụng. Tuy nhiên, hệ thống OCR vẫn còn gặp khó khăn trong việc nhận diện chính xác các loại văn bản phức tạp, đặc biệt là trong môi trường không ổn định như ánh sáng yếu, văn bản mờ, hoặc các loại phông chữ lạ.
+Nhận diện hình ảnh
+Công nghệ nhận diện hình ảnh đã được tích hợp vào một số thiết bị di động và ứng dụng dành cho người khiếm thị, giúp mô tả cảnh vật và đối tượng xung quanh. Tuy nhiên, độ chính xác của nhận diện hình ảnh không phải lúc nào cũng đảm bảo, đặc biệt là trong môi trường phức tạp hoặc với những đối tượng khó nhận diện.
+Hệ thống dẫn đường cho người khiếm thị:
+Các ứng dụng dẫn đường như Aira hay Be My Eyes cung cấp sự trợ giúp từ xa qua các cuộc gọi video với tình nguyện viên, giúp người khiếm thị tìm đường và nhận diện các vật thể. Tuy nhiên, những ứng dụng này phụ thuộc vào sự hỗ trợ của con người và không thể hoạt động độc lập trong mọi tình huống.
+Kính thông minh và thiết bị đeo:
+Các sản phẩm kính thông minh và thiết bị đeo như OrCam MyEye, Eyelight và Sunu Band đang giúp người khiếm thị cải thiện khả năng nhận diện môi trường và đọc văn bản. Tuy nhiên, giá thành của các thiết bị này còn khá cao, và các công nghệ nhận diện chưa hoàn hảo trong mọi tình huống.
+4.2 Những mâu thuẫn trong phát triển kính AI hỗ trợ người khiếm thị
+ Mâu thuẫn giữa độ chính xác của công nghệ và yêu cầu thực tế
+ Công nghệ nhận diện văn bản (OCR) và nhận diện hình ảnh đang ngày càng phát triển, nhưng vẫn còn những hạn chế trong việc nhận diện chính xác văn bản hoặc hình ảnh trong môi trường phức tạp. Ví dụ, văn bản mờ, ánh sáng không đủ, hoặc các phông chữ không tiêu chuẩn có thể khiến hệ thống nhận diện sai hoặc không chính xác. Mô tả hình ảnh cũng có thể gặp khó khăn trong việc nhận diện các đối tượng nhỏ hoặc trong các tình huống thay đổi liên tục (chẳng hạn như trong giao thông, nơi có nhiều chuyển động và thay đổi nhanh chóng).
+ Mâu thuẫn giữa chi phí và khả năng tiếp cận
+Các thiết bị kính AI hỗ trợ người khiếm thị hiện tại vẫn có chi phí khá cao. Ví dụ, các thiết bị như OrCam MyEye hay Sunu Band có giá bán lên đến vài nghìn USD, điều này khiến việc tiếp cận công nghệ trở thành một thách thức lớn đối với người khiếm thị có thu nhập thấp hoặc sống ở các khu vực không có sự hỗ trợ tài chính.
+Mặc dù công nghệ đang ngày càng trở nên phổ biến hơn, nhưng vẫn còn nhiều người khiếm thị không có khả năng chi trả cho các thiết bị này, dẫn đến việc chia cắt giữa những người có điều kiện sử dụng công nghệ cao và những người không thể tiếp cận.
+Mâu thuẫn về khả năng tự động hóa và sự phụ thuộc vào người khác
+Các hệ thống hỗ trợ người khiếm thị, dù hiện đại, vẫn thường có mức độ phụ thuộc vào con người. Ví dụ, các ứng dụng như Be My Eyes yêu cầu người khiếm thị kết nối với các tình nguyện viên để nhận trợ giúp qua cuộc gọi video. Điều này khiến người khiếm thị không thể hoàn toàn tự chủ trong việc đọc văn bản hoặc nhận diện hình ảnh mà không có sự trợ giúp từ bên ngoài.
+ Mâu thuẫn giữa tính linh hoạt và tính ổn định trong các điều kiện môi trường khác nhau
+Công nghệ AI và các cảm biến trong kính hỗ trợ người khiếm thị có thể hoạt động rất hiệu quả trong các điều kiện ổn định, nhưng khi môi trường thay đổi (ví dụ: từ ánh sáng mạnh ra ánh sáng yếu, từ không gian mở vào không gian chật hẹp), độ chính xác của hệ thống có thể giảm sút.
+Các kính AI cần phải được thiết kế để có thể hoạt động ổn định trong nhiều điều kiện môi trường khác nhau. Tuy nhiên, việc duy trì tính ổn định và hiệu quả trong các tình huống thay đổi liên tục là một vấn đề khó khăn đối với các nhà phát triển.
+ Mâu thuẫn giữa sự cải tiến công nghệ và sự đơn giản trong sử dụng
+Một số kính AI có thể quá phức tạp đối với người khiếm thị, đặc biệt là những người không quen với công nghệ cao. Giao diện người dùng và quá trình thiết lập có thể trở thành rào cản đối với những người không quen với công nghệ hoặc những người có khả năng tiếp thu hạn chế. Đơn giản hóa giao diện và cải thiện trải nghiệm người dùng là một trong những yêu cầu quan trọng để kính AI có thể thực sự hỗ trợ người khiếm thị một cách hiệu quả.
+PHẦN III: PHƯƠNG PHÁP NGHIÊN CỨU
+1.	Các biện pháp giải quyết vấn đề
+1.1	. Phát triển công nghệ nhận dạng hình ảnh và văn bản
+Công nghệ nhận diện văn bản (OCR): Phương pháp này sẽ sử dụng công nghệ quét và nhận diện văn bản từ hình ảnh. Các hệ thống OCR giúp chuyển đổi hình ảnh chữ viết thành văn bản có thể đọc được. Kính AI có thể tích hợp một ứng dụng OCR để nhận diện văn bản từ các tài liệu, biển hiệu, hay bất kỳ văn bản nào trong môi trường xung quanh.
+Nhận diện hình ảnh (Image Recognition): Kính có thể sử dụng các thuật toán AI (chẳng hạn như học sâu - deep learning) để nhận diện các đối tượng trong hình ảnh và mô tả chúng cho người dùng khiếm thị. Các thuật toán này có thể phân loại vật thể, cảnh quan, màu sắc, thậm chí là hành động hoặc trạng thái của con người trong hình ảnh.
+1.2. Giao diện người dùng và trải nghiệm
+Điều khiển bằng giọng nói: Người sử dụng kính AI có thể điều khiển kính thông qua giọng nói, ra lệnh để kính nhận diện và mô tả hình ảnh hoặc đọc văn bản.
+Tương tác trực quan: Các nút bấm hoặc màn hình cảm ứng có thể được tích hợp vào kính để người khiếm thị điều chỉnh các chức năng, nhưng chủ yếu sẽ ưu tiên tính năng điều khiển bằng giọng nói để thuận tiện hơn.
+1.3. Nghiên cứu về hiệu quả và tính ứng dụng
+Đánh giá khả năng nhận diện: Các thử nghiệm có thể được thực hiện để đánh giá khả năng nhận diện văn bản và hình ảnh của kính AI trong các tình huống thực tế, chẳng hạn như tại nơi công cộng, trong các cửa hàng, trên đường phố, trong nhà.
+Khả năng hiểu ngữ cảnh: Đối với các tình huống phức tạp (ví dụ: một nhóm người đang trò chuyện hoặc một cảnh vật với nhiều đối tượng), kính AI có thể phải có khả năng phân tích ngữ cảnh để đưa ra mô tả chính xác và dễ hiểu cho người dùng.
+1.4. Phát triển phần mềm và phần cứng
+Tích hợp phần cứng (Kính thông minh): Kính sẽ cần có các cảm biến hình ảnh (camera, cảm biến chiều sâu) và các bộ xử lý mạnh mẽ để thực hiện các tác vụ nhận dạng hình ảnh và văn bản. Ngoài ra, chúng sẽ cần các cảm biến bổ sung như micrô để nhận diện giọng nói và cảm biến di chuyển để giúp xác định hướng nhìn của người sử dụng.
+Ứng dụng phần mềm AI: Các thuật toán học máy và trí tuệ nhân tạo sẽ đóng vai trò quan trọng trong việc xử lý hình ảnh và văn bản. Các công cụ AI sẽ giúp kính phân tích dữ liệu từ các cảm biến và cung cấp phản hồi phù hợp cho người dùng.
+1.5. Đánh giá tính khả thi và độ chính xác
+Thử nghiệm với người khiếm thị: Một phần quan trọng trong nghiên cứu này là thử nghiệm sản phẩm trên người khiếm thị để đảm bảo tính hiệu quả của công nghệ. Các nghiên cứu có thể bao gồm việc đánh giá độ chính xác của kính trong việc nhận diện văn bản và hình ảnh trong các tình huống khác nhau.
+Phản hồi người dùng: Việc thu thập phản hồi từ người dùng khiếm thị sẽ giúp cải thiện tính năng của kính và đảm bảo sản phẩm đáp ứng nhu cầu thực tế của họ.
+1.6. Ứng dụng trong cuộc sống hàng ngày
+Giúp người khiếm thị độc lập hơn: Kính AI có thể giúp người khiếm thị dễ dàng hơn trong việc tương tác với thế giới xung quanh, chẳng hạn như đọc biển hiệu, nhận diện sản phẩm trong siêu thị, hay thậm chí xác định các tình huống nguy hiểm.
+Ứng dụng trong giao thông công cộng: Khi đi lại trong thành phố, kính AI có thể giúp người khiếm thị nhận diện các tín hiệu giao thông, biển báo hoặc các điểm mốc quan trọng.
+2.Phân tích và xây dựng hệ thống điều khiển.
+
+ 
+
+
+
+3. Viết code điều khiển hoạt động của bộ xử lý tín hiệu: 
+import os
+import PIL.Image
+import google.generativeai as genai
+import time
+from gtts import gTTS
+from pydub import AudioSegment
+from pydub.playback import play 
+from picamera import PiCamera
+import RPi.GPIO as GPIO
+sensor = 23
+sensor1 = 24
+GPIO.setwarnings (False)
+GPIO. setmode (GPIO. BCM)
+GPIO. setup (sensor, GPIO. IN)
+GPIO. setup (sensor1, GPIO. IN)
+genai.configure(api_key="AIzaSyD8DZpbyHAjtxZvoZ_lLSpnT4dsJLFnZL8"
+camera = PiCamera ()
+model = genai. GenerativeModel( model_name="gemini-1.5-pro")
+print ( 'Ready' )
+try:
+    while True:
+        if (GPIO. input (sensor) == 0) :
+            print ('Capturing')
+            camera. capture ('abc.jpg')
+            time.sleep (2)
+            print( 'Captured')
+            img = PIL. Image. open( 'abc.jpg')
+            response = model. generate_content([ 'Mô tả hình ảnh bằng Tiếng Việt',img], stream=True )
+            response. resolve( )
+            print (response.text)
+            mytext="response.text"
+            language = 'vi'
+            myobj = gTTS(text=mytext, lang=language, slow=False)
+            myobj.save("welcome.mp3")
+            song = AudioSegment.from_mp3("/home/pi/myenv/welcome.mp3")
+            play(song)
+            print( 'Done')
+        if (GPIO. input (sensor1) == 0) :
+            print ('Reading')
+            camera. capture ('abc.jpg')
+            img = PIL. Image. open( 'abc-jpg')
+            response = model. generate_content([ 'Đọc nội dung bức ảnh bằng Tiếng Việt',img] , stream=True)
+            response.resolve()
+            tts = gTTS(response, lang='vi')
+            b = response.text.replace('*', '')
+            print(b)
+            tts.save("output.mp3")
+            playsound("output.mp3")
+            print('Done')
+except KeyboardInterrup:
+        GPIO. cleanup( )
+4. Nguyên lý hoạt động của hệ thống
+Nhận diện và đọc văn bản thông minh:
+Sử dụng camera để chụp và phân tích văn bản thông qua công nghệ xử lý ảnh
+Tích hợp AI xử lý ngữ cảnh và nội dung, giúp đọc văn bản bằng giọng nói tự nhiên, chính xác.
+Mô tả hình ảnh chính xác bằng giọng nói:
+Ứng dụng AI để phân tích hình ảnh thời gian thực, nhận diện đối tượng, cảnh vật hoặc thông tin cụ thể.
+Hỗ trợ tạo mô tả chi tiết, ngắn gọn và truyền đạt qua âm thanh, giúp người khiếm thị hiểu rõ môi trường xung quanh.
+Hoạt động đa nhiệm và cá nhân hóa:
+Nhờ sức mạnh xử lý đa nhiệm của AI, sản phẩm cung cấp trải nghiệm thời gian thực mượt mà, từ nhận diện văn bản đến mô tả hình ảnh.
+Hỗ trợ kết nối Wi-Fi hoặc 4G để sử dụng dịch vụ AI đám mây, đảm bảo hiệu suất cao và cập nhật liên tục.
+Thiết kế thân thiện, dễ sử dụng:
+Sản phẩm có giao diện trực quan, dễ thao tác với các nút bấm và phản hồi âm thanh.
+Thiết kế gọn nhẹ, tiện lợi, phù hợp với mọi đối tượng người dùng, đặc biệt là người khiếm thị.
+5. Thử nghiệm- kết quả
+Hỗ trợ người khiếm thị hiệu quả: sản phẩm giúp người khiếm thị tự đọc văn bản, nhận diện hình ảnh và mô tả bằng giọng nói, tăng tính tự chủ.
+Chi phí hợp lý: Sử dụng phần cứng giá rẻ như Raspberry Pi Zero 2 W, dễ tiếp cận với cá nhân và tổ chức từ thiện.
+Dễ sử dụng: Thiết kế thân thiện, nhỏ gọn, dễ thao tác, phù hợp với mọi đối tượng người dùng.
+Ứng dụng đa dạng: Phù hợp trong nhiều tình huống từ giáo dục, làm việc đến sinh hoạt hàng ngày.
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Hạn chế.
+Chưa có khả năng chỉ đường: Hiện tại, sản phẩm chưa được tích hợp chức năng chỉ đường, một tính năng quan trọng giúp người khiếm thị di chuyển độc lập và an toàn trong môi trường công cộng.
+Giải pháp khắc phục:
+Tích hợp công nghệ GPS và bản đồ số vào sản phẩm, cho phép xác định vị trí và hướng dẫn đường đi bằng giọng nói.
+Sử dụng các API như Google Maps hoặc OpenStreetMap để cung cấp chỉ dẫn thời gian thực.
+Kết hợp cảm biến siêu âm để phát hiện chướng ngại vật, tăng độ an toàn khi di chuyển.
+7. Hướng phát triển của đề tài.
+Tích hợp chỉ đường: Trong tương lai, sản phẩm sẽ được bổ sung chức năng chỉ đường thông qua việc tích hợp GPS và bản đồ số. Người dùng có thể nhận được hướng dẫn di chuyển bằng giọng nói nhờ các API như Google Maps, giúp tăng tính độc lập và an toàn trong việc đi lại.
+Phát hiện chướng ngại vật: Sản phẩm sẽ được nâng cấp với cảm biến siêu âm hoặc lidar để nhận diện vật cản trên đường di chuyển. Điều này giúp người dùng phát hiện và tránh được các chướng ngại vật trong môi trường đông đúc hoặc không gian phức tạp.
+Nâng cao hiệu suất AI: Việc sử dụng các mô hình AI tiên tiến như Google Gemini sẽ giúp cải thiện độ chính xác trong nhận diện văn bản và hình ảnh, đặc biệt trong điều kiện ánh sáng yếu hoặc các môi trường phức tạp.
+Phát triển tính năng giáo dục: Tích hợp thêm các ứng dụng như sách nói, hướng dẫn học tập, hoặc các nội dung giáo dục để mở rộng phạm vi sử dụng của sản phẩm, đặc biệt trong các trung tâm giáo dục hoặc gia đình.
+Tăng thời lượng sử dụng: Để đáp ứng nhu cầu di chuyển liên tục, sản phẩm sẽ được cải thiện về pin và hiệu suất phần cứng, giúp kéo dài thời gian hoạt động và tăng độ tin cậy trong sử dụng hàng ngày.
+ PHẦN IV: KẾT LUẬN
+1.Ý NGHĨA CỦA ĐỀ TÀI: 
+Đề tài nghiên cứu này không chỉ có ý nghĩa khoa học mà còn mang lại những lợi ích thiết thực cho xã hội. Sự phát triển của kính AI sẽ giúp người khiếm thị sống độc lập hơn, tiếp cận thông tin dễ dàng và tham gia vào các hoạt động xã hội, từ đó đóng góp vào việc xây dựng một cộng đồng công bằng và hòa nhập hơn.
+2. ĐỀ XUẤT:
+Sản phẩm sẽ được phát triển hoàn thiện hơn với các tính năng bổ sung như chỉ đường, phát hiện chướng ngại vật và cải thiện hiệu suất hoạt động để đáp ứng tốt hơn nhu cầu của người khiếm thị. Đồng thời, mục tiêu là mở rộng phạm vi ứng dụng trên toàn quốc, đặc biệt trong lĩnh vực giáo dục và hỗ trợ cộng đồng, giúp nâng cao chất lượng cuộc sống cho người dùng. Ngoài ra, sản phẩm sẽ được thương mại hóa với mức giá hợp lý, nhằm tiếp cận nhiều cá nhân và tổ chức từ thiện, góp phần xây dựng một xã hội hòa nhập và tiến bộ hơn.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lời cảm ơn!
+Lời đầu tiên, chúng em xin chân thành cảm ơn  cô giáo hướng dẫn, cô đã tận tình hướng dẫn, chỉ bảo và luôn có sự phản hồi tỉ mỉ trong thời gian nhanh nhất nhằm giúp chúng em trong suốt thời gian qua để có thể hoàn thành đề tài này. 
+Chúng em xin gửi tới cô  lời cảm ơn sâu sắc vì nhờ cô, chúng em đã có những kiến thức quan trọng trong về chuyên môn cũng như kinh nghiệm tham gia cuộc thi, từ đó em có thể biết cách phân tích tài liệu, có cái nhìn tổng quát về một nội dung dạy học để đưa ra quy trình phù hợp.
+Chúng em cũng xin cảm ơn  lãnh đạo nhà trường  đã tạo điều kiện tốt nhất giúp em hoàn thành đề tài.
+Những đóng góp quý báu từ quý thầy cô BGK sẽ giúp em khắc phục những sai sót ấy và có thể hoàn thiện đề tài nghiên cứu tốt hơn.
+Chúng em xin cảm ơn quý thầy cô! 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tài liệu tham khảo: 
+1.	World Health Organization (WHO). (2019). World Report on Vision:  Báo cáo này cung cấp cái nhìn tổng quan về tình trạng khiếm thị trên toàn cầu, các nguyên nhân, và các giải pháp hỗ trợ cho người khiếm thị, bao gồm các công nghệ tiên tiến.
+2.	https://vn.search.yahoo.com/search;_ylt=AwrKCclDMkVnZgIAcfJrUwx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3JlbC1lYXN0?type=E210VN91215G0&p=ng%C6%B0%E1%BB%9Di+b%E1%BB%8B+khi%E1%BA%BFm+th%E1%BB%8B&fr2=p%3As%2Cv%3Aw%2Cm%3Aat-e%2Cct%3Auni&fr=mcafee
+3.	https://vi.wikipedia.org/wiki/Tr%C3%AD_tu%E1%BB%87_nh%C3%A2n_t%E1%BA%A1o
+4.	Machine Learning for beginners – Sách tự học trí tuệ nhân tạo
+5.	Artificial Intelligence the basics
+6.	https://donghanhviet.vn/ung-dung-cong-nghe-so-ho-tro-nguoi-khiem-thi-hoa-nhap-cong-dong/
+
+

@@ -1,0 +1,17 @@
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cross-Origin-Resource-Policy = "cross-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Opener-Policy = "same-origin"
+
+[[headers]]
+  for = "*.glb"
+    [headers.values]
+    Content-Type = "model/gltf-binary"
+
+[[headers]]
+  for = "*.usdz"
+    [headers.values]
+    Content-Type = "model/vnd.usdz+zip"
